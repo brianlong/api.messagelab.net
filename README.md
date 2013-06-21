@@ -15,7 +15,7 @@ Here are the problems that I think need to be solved or features that should alw
 9. Support for encryption via GPG should be built-in.
 10. Companies should be able to set company-wide email rules that are enforceable across all email clients for all employees. The rules might be for corporate policies or government regulation.
 
-Are there other problems or features that should be listed here? What else should I add to this list? You can comment in the Issues tracker here on GitHub (Please use the Comment Thread) or on Twitter @brianlong. Thanks!
+Are there other problems or features that should be listed here? What else should I add to this list? You can comment in the Issues tracker here on GitHub (Please use the Comment Thread), on Twitter @brianlong, or on FaceBook (if you know me there). Thanks!
 
 API
 ==================
