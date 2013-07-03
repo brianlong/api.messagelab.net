@@ -19,9 +19,9 @@ Are there other problems or features that should be listed here? What else shoul
 
 Definitions
 ===========
-* Address: A User's unique Message Address in the same format as as email address (e.g. john.doe@example.com)
-* Contact List: A list of Addresses, Signatures, Post Keys, and GPG Keys related to others.
-* GPG (Gnu Privacy Guard) Key: A way for two Users to encrypt or sign Messages. The exchange of GPG keys is optional.
+* Address: A User's unique Message Address in the same format as an email address (e.g. john.doe@example.com)
+* Contact List: A list of Addresses, Signatures, Post Keys, and GPG Keys related to other people or organizations.
+* GPG (Gnu Privacy Guard) Key: A way for two Users to encrypt or digitally sign Messages. The exchange of GPG keys is optional.
 * Handshake: A process between two Users to verify that they wish to exchange Messages. The Handshake process includes an exchange of Post Keys. The exchange of GPG keys is optional.
 * Message: A message sent from one User to another via a Server.
 * Post Key: A unique key required to post Messages to another User's Server.
@@ -43,7 +43,7 @@ API
 ===
 To accomplish these goals, I am planning a two-tiered system using HTTPS and REST APIs with a traditional web architecture. This upper tier of service will wrap legacy email so messages can be exchanged with others regardless of the system they are on. This API only discusses the upper tier. Programmers will be required to wrap their own legacy email infrastructure as required by their environment.
 
-The Message Labs API is implemented as JSON or XML over HTTP using all four verbs (GET/POST/PUT/DELETE). Every resource, like Handshake or Message, has their own URL and are manipulated in isolation. We will follow the REST principles as much as we can, however some operations such as PUT or DELETE may be no-ops since Messages are immutable or the User is not properly authorized.
+The Message Labs API is implemented as JSON or XML over HTTP using all four verbs (GET/POST/PUT/DELETE). Every resource, like Handshake or Message, has their own URL and are manipulated in isolation. We will follow the REST principles as much as we can, however some operations such as PUT or DELETE may be no-ops since Messages are immutable or the User may not be properly authorized.
 
 You can explore the view part of the API (everything that's fetched with GET) through a regular browser. Using Firefox for this is particularly nice as it has a good, simple XML renderer (unlike Safari which just strips the tags and dumps the content). For example: /signatures.xml?a=USER_ADDRESS&pk=POST_KEY for XML or /signatures.json?a=USER_ADDRESS&pk=POST_KEY for JSON.
 
