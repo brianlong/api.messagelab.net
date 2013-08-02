@@ -38,4 +38,4 @@ HTTP Status Code 200 OK .
 **JSON RESPONSE**
 HTTP Status Code 200 OK.
 
-Handshakes are immutable, so PUT (edit) and DELETE (delete) are not supported.
+Handshakes are immutable, so PUT (edit) and DELETE (delete) are not supported. Only the recipient can see a Handshake after it has been created.

@@ -30,14 +30,19 @@ It is the responsibility of the Sender's server to POST the Message to each reci
   <from>From Address</from>
   <to_addresses>
     <to>To Address</to>
+    ...
   </to_addresses>
   <cc_addresses>
     <cc>CC Address</cc>
+    ...
   </cc_addresses>
   <bcc_addresses>
     <bcc>BCC Address</bcc>
+    ...
   </bcc_addresses>
   <subject>Subject</subject>
+  <body_text>The Body of the message in text format</body_text>
+  <body_html>The body of the message in HTML format</body_html>
   More ...
   <sent_at>Date and Time Sent by Server (UTC)</sent_at>
 </message>
@@ -62,4 +67,4 @@ HTTP Status Code 200 OK or 401 Unauthorized.
 
 HTTP Status Code 200 OK or 401 Unauthorized.
 
-Messages are immutable, so PUT (edit) and DELETE (delete) are not supported.
+Messages are immutable, so PUT (edit) and DELETE (delete) are not supported. Only the recipients can read Messages.
