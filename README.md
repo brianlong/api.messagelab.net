@@ -4,7 +4,7 @@ I am starting a new project to enhance Internet email by solving certain problem
 
 Here are the problems that I think need to be solved or features that should always be included for effective email / messaging:
 
-1. Less junk mail! The current system, and the Internet in general, are clogged up with junk email. A new email protocol will prevent junk mail from being delivered.
+1. Less junk mail! The current system, and the Internet in general, are clogged up with junk email. A new messaging protocol should prevent junk mail from being delivered.
 2. Delivery confirmations. At our office, we receive phone calls weekly from customers who did not receive an email we sent. It appears that their email was lost on the Internet. All messages sent should receive responses indicating the delivery status.
 3. Integration with CRM / corporate transaction systems. I would like a simple REST API that I can use to integrate our company email into our transaction and CRM systems. All email sent to or from a customer should be attached to a customer record, in an easy to read format, regardless of who sent it or where it was sent from. Current email implementations are very weak in this regard.
 4. Privacy while traveling the Internet. I want to be assured of secure point-to-point communications from my server to the recipient's server.
@@ -33,7 +33,7 @@ Sample Use
 ==========
 Before exchanging messages, two Users will need to exchange Post Keys through a Handshake process. Anne will send a Handshake request to Bob's Address including a unique Post Key for Bob to use when he sends Messages to Anne's Address. Bob will then respond to Anne including a unique Post Key for Anne to use when she sends Messages to Bob. The two Post Keys will be unique and exclusive to each pair of User Addresses. In the event that a Post Key is compromised, Anne and Bob can simply repeat the Handshake process and replace the old Post Keys with new.
 
-After the Handshake, Anne and Bob will be able to exchange messages. They can also use their Post Key request the other's signature to receive updated contact information.
+After the Handshake, Anne and Bob will be able to exchange messages. They can also use their Post Key to request the other's signature to receive updated contact information.
 
 Any messages that do not include the correct Post Key will be rejected by the User's Server. This should prevent junk messages from ever being a problem.
 
@@ -69,7 +69,7 @@ User Authentication On Our Server
 =================================
 When you're using the API, it's always through an existing User. There's no special API user. So when you use the API as "John Doe", you get to see and work with what "John Doe" is allowed to see and do. Authenticating is done with an authentication token, which you'll find on the User Profile screen of our website.
 
-When using the authentication token, you don't need a separate password. But since Moving Leads uses HTTPS & Basic Authentication, and lots of implementations assume that you want to have a password, it's often easier just to pass in a dummy password, like X.
+When using the authentication token, you don't need a separate password. But since we use HTTPS & Basic Authentication, and lots of implementations assume that you want to have a password, it's often easier just to pass in a dummy password, like X.
 
 Here's an authentication example using curl:
 
