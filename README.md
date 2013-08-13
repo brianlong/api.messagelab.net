@@ -11,9 +11,10 @@ Here are the problems that I think need to be solved or features that should alw
 5. Managing and synchronizing email handling rules between my mail clients should be seamless and just work.
 6. Elegant presentation and threading of conversations. Currently, long threaded conversations can be very difficult to read due to repeated signature blocks and messages. A new system should be able to parse the conversation and signature blocks to present the thread in an elegant manner.
 7. I would like to be able to manage all of my email accounts from a single interface.
-8. Digital signatures should be standard to help prevent phishing attacks and assure the recipient that my message was actually from me.
-9. Support for encryption via OpenGPG should be built-in.
-10. Companies should be able to set company-wide email rules that are enforceable across all email clients for all employees. The rules might be for corporate policies or government regulation.
+8. Companies should be able to set company-wide email rules that are enforceable across all email clients for all employees. The rules might be for corporate policies or government regulation.
+9. FUTURE: Support for encryption via OpenGPG to be built-in.
+10. FUTURE: Digital signatures to help prevent phishing attacks and assure the recipient that my message was actually from me.
+
 
 Are there other problems or features that should be listed here? What else should I add to this list? You can comment in the Issues tracker here on GitHub (Please use the Comment Thread), on Twitter @brianlong, or on FaceBook (if you know me there). Thanks!
 

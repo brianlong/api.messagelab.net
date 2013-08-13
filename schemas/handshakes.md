@@ -12,7 +12,7 @@ Handshakes should by sent by POST to `https://messagelab.net/handshakes.xml?a=us
 
 ``` xml
 <handshake>
-  <id>Globally Unique Handshake ID from the Sender's Server</id>
+  <sender_id>Globally Unique Handshake ID from the Sender's Server</sender_id>
   <address>The Sender's Address</address>
   <post_key>The Post Key to use when sending Messages back to the Sender.</post_key>
   <gpg_public_key>The GPG public key to use when encrypting Messages to the Sender (optional)</pgp_pubic_key>
@@ -20,14 +20,14 @@ Handshakes should by sent by POST to `https://messagelab.net/handshakes.xml?a=us
 ```
 
 **XML RESPONSE:**
-HTTP Status Code 200 OK .
+HTTP Status Code 200 OK.
 
 **JSON POST (TO ANOTHER SERVER):**
 ``` json
 {
   "handshake":
   {
-    "id:"Globally Unique Handshake ID from the Sender's Server",
+    "sender_id:"Globally Unique Handshake ID from the Sender's Server",
     "address":"The Sender's Address",
     "post_key":"The Post Key to use when sending Messages to the Sender.",
     "gpg_public_key":"The GPG public key to use when encrypting Messages to the Sender (optional)"
