@@ -56,7 +56,7 @@ Exchanging Handshakes Between Servers
 
 If Anne accepts Bob's Handshake, she will post a Handshake to Bob's server for him to accept.
 
-See the [Handshake Schema](https://github.com/brianlong/api.messagelab.com/blob/master/schemas/handshakes.md) for the data included in a Handshake request.
+See the [Handshake Schema](https://github.com/brianlong/api.messagelab.net/blob/master/schemas/handshakes.md) for the data included in a Handshake request.
 
 Exchanging Messages Between Servers
 ===================================
@@ -66,7 +66,7 @@ The recipient's Server will verify that the sender's Address and Post Key match.
 
 All [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes) will be supported and returned by the Server where appropriate.
 
-See the [Message Schema](https://github.com/brianlong/api.messagelab.com/blob/master/schemas/messages.md) for the data included in a Message.
+See the [Message Schema](https://github.com/brianlong/api.messagelab.net/blob/master/schemas/messages.md) for the data included in a Message.
 
 User Authentication On Our Server
 =================================
