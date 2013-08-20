@@ -25,9 +25,8 @@ HTTP Status Code 200 OK.
 **JSON POST (TO ANOTHER SERVER):**
 ``` json
 {
-  "handshake":
-  {
-    "sender_id:"Globally Unique Handshake ID from the Sender's Server",
+  "handshake": {
+    "sender_id":"Globally Unique Handshake ID from the Sender's Server",
     "address":"The Sender's Address",
     "post_key":"The Post Key to use when sending Messages to the Sender.",
     "gpg_public_key":"The GPG public key to use when encrypting Messages to the Sender (optional)"

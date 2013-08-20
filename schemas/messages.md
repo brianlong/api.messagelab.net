@@ -82,7 +82,7 @@ HTTP Status Code 200 OK or 401 Unauthorized.
     "headers":{
       "header":"Contents of a single header record",
       "header":"..."
-    }
+    },
     "dkim":"Domain Keys results & signatures",
     "spf":"Sender Policy Framework verification",
     "junk_score":"Junk Mail Score",
@@ -92,22 +92,22 @@ HTTP Status Code 200 OK or 401 Unauthorized.
     "to_addresses":{
       "to":"To Address",
       "to":"..."
-    }
+    },
     "cc_addresses":{
       "cc":"CC Address",
       "cc":"..."
-    }
+    },
     "bcc_addresses":{
       "bcc":"BCC Address",
       "bcc":"..."
-    }
+    },
     "subject":"Subject",
     "body_text":"Body in Text format",
     "body_html":"Body in HTML format",
     "attachments":{
       "attachment":"path to file",
       "mime_type":"MIME Type"
-    }
+    },
     "sent_at":"Date and Time Sent by Server (UTC)"
   }
 }
