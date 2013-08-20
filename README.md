@@ -48,11 +48,11 @@ API
 ===
 The Message Labs API is implemented as JSON or XML over HTTP using all four verbs (GET/POST/PUT/DELETE). Every resource, like Handshake or Message, has their own URL and are manipulated in isolation. We will follow the REST principles as much as we can, however some operations such as PUT or DELETE may be no-ops since Messages are immutable or the User may not be properly authorized.
 
-You can explore the view part of the API (everything that's fetched with GET) through a regular browser. Using Firefox for this is particularly nice as it has a good, simple XML renderer. For example: /signatures.xml?a=USER_ADDRESS&pk=POST_KEY for XML or /signatures.json?a=USER_ADDRESS&pk=POST_KEY for JSON.
+You can explore the view part of the API (everything that's fetched with GET) through a regular browser. Using Firefox for this is particularly nice as it has a good, simple XML renderer. For example: /u/user.name/signatures.xml?pk=POST_KEY for XML or /u/user.name/signatures.json?pk=POST_KEY for JSON.
 
 Exchanging Handshakes Between Servers
 =====================================
-* `POST /handshakes.format?a=user.name&pk=POST_KEY` creates a new Handshake request on the recipient's Server.
+* `POST /u/user.name/handshakes.format?pk=POST_KEY` creates a new Handshake request on the recipient's Server.
 
 If Anne accepts Bob's Handshake, she will post a Handshake to Bob's server for him to accept.
 
@@ -60,7 +60,7 @@ See the [Handshake Schema](https://github.com/brianlong/api.messagelab.net/blob/
 
 Exchanging Messages Between Servers
 ===================================
-* `POST /messages.format?a=user.name&pk=POST_KEY` creates a new Message on the recipient's Server.
+* `POST /u/user.name/messages.format&pk=POST_KEY` creates a new Message on the recipient's Server.
 
 The recipient's Server will verify that the sender's Address and Post Key match. If they are correct, the Server will respond with an HTTP status code of "200 OK" to indicate success. This status code will also serve as confirmation of delivery. If the User Address and Post Key do not match, the Message is discarded and the Server will return an HTTP status code of "401 Unauthorized"
 
@@ -76,7 +76,7 @@ When using the authentication token, you don't need a separate password. But sin
 
 Here's an authentication example using curl:
 
-    curl -u 605b32dd:X https://messagelab.net/signatures/USER_ADDRESS.xml&pk=POST_KEY
+    curl -u 605b32dd:X https://messagelab.net/u/user.name/signatures.xml?pk=POST_KEY
     
 Remember that anyone who has your authentication token can see and change everything you have access to. So you want to guard that as well as you guard your username and password. If you come to fear that it has been compromised, you can regenerate it at any time from the User Profile screen on our website.
 

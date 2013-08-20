@@ -120,6 +120,6 @@ HTTP Status Code 200 OK or 401 Unauthorized.
 
 Messages are immutable, so PUT (edit) is not supported.
 
-DELETE (delete) will be supported for a User's own message store.
+DELETE (delete) will only be supported for a User's own message store.
 
 Only the recipients can read Messages.
